@@ -68,29 +68,12 @@
     width: 80%;
     height: auto;
   }
-
-  .nav {
-    grid-row: 1;
-    grid-column: 4 / 10;
-    padding-top: 20px;
-    font-size: 24px;
-    letter-spacing: -0.2px;
-    white-space: nowrap;
-    color: rgba(0, 0, 0, 0.6);
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color 0.2s ease;
-  }
-
-  .nav:hover {
-    color: rgba(0, 0, 0, 1);
-  }
   
   .page-title {
     grid-row: 1;
     grid-column: 4 / 10;
-    padding-top: 100px;
-    font-size: 18px;
+    padding-top: 20px;
+    font-size: 24px;
     letter-spacing: -0.2px;
     white-space: nowrap;
   }
