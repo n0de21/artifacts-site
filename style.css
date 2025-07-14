@@ -43,13 +43,15 @@
     position: absolute;
     padding: 20px;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
   }
 
   .header-nav a {
     text-decoration: none;
     font-size: 18px;
     letter-spacing: -0.1px;
-    line-height: 1;
+    line-height: 24px;
     opacity: 0.6;
     width: auto;
     color: #000000;
