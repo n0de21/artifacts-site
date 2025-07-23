@@ -356,6 +356,8 @@
   }
   
   #overlay {
+    grid-row: 1;
+    grid-column: 10 / 13;
     margin-top: 40px;
     font-size: 22px;
     color: #000000;
