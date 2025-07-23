@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector(".header-nav");
+    if (!nav) return;
+  
+    const page = nav.getAttribute("data-page");
+    const links = nav.querySelectorAll("a");
+
+    links.forEach(link => {
+    if (link.getAttribute("data-name") === page) {
+      link.classList.add("active");
+      }
+    });
+});    
+
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelector('.slides');
     const total = document.querySelectorAll('.slide').length;
@@ -37,20 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const nav = document.querySelector(".header-nav");
-        if (!nav) return;
-      
-        const page = nav.getAttribute("data-page");
-        const links = nav.querySelectorAll("a");
-    
-        links.forEach(link => {
-        if (link.getAttribute("data-name") === page) {
-          link.classList.add("active");
-          }
-        });
-      });    
 
+    
 // EmailJS init
 emailjs.init('xShM2ay95f3fuFGSj');
 
