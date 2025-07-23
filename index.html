@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Phase Tracklist</title>
+  <title>Artifacts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.svg" type="image/x-icon">
@@ -22,7 +22,49 @@
     <a href="https://n0de21.github.io/artifacts-site/" target="_self" data-name="Artifacts">└ Artifacts</a>
   </nav>
 
-  <div class="page-title">Under construction</div>
+  <div class="product-viewer">
+    <!-- Слайдер -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="assets/1.png" alt=""></div>
+        <div class="slide"><img src="assets/2.png" alt=""></div>
+        <div class="slide"><img src="assets/3.png" alt=""></div>
+        <div class="slide"><img src="assets/4.png" alt=""></div>
+      </div>
+      <button class="nav prev" id="prev">&#8592;</button>
+      <button class="nav next" id="next">&#8594;</button>
+      <div class="dots" id="dots"></div>
+    </div>
+    </div>
+
+    <!-- Описание и форма -->
+    <div class="info">
+      <div class="page-title">n°fragment{1-21}</div>
+      <div class="block-info">You’re not wearing jewelry.
+      You’re carrying a memory.</div>
+      <div class="description">
+        
+They are not tokens. They are evidence. Of distortion. Of memory. Of the broadcast.
+
+Worn close to skin, each piece is a carrier node — listening, shifting, rewriting the signal with your presence.
+
+Pre-order lists opens now. 
+Delivery starts from 01/2026.
+Only 21 traces. No restock. No echo.
+
+Material = silver
+Size-Jewel ± W2,5CM × H1,5CM
+Size-Chain ± 50CM
+Ship = Worldwide
+Ship price = Excl
+Price = 210USDT
+      </div>
+      <div class="email-form">
+        <input type="email" id="email" placeholder="Input your email if interested">
+        <button id="sendBtn">Y</button>
+      </div>
+    </div>
+
 
   <div class="bottom-links">
     <a href="https://www.twitch.tv/n0de21" target="_blank">Stream</a>
@@ -45,9 +87,9 @@
     });
   });
   </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "11c560ed23354eaa947d04071870c871"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script src="script.js"></script>
+  
 </body>
 
 </html>

@@ -235,3 +235,124 @@
       margin-right: 12px;
     }
   }
+
+  .product-viewer {
+    grid-row: 1;
+    grid-column: 4 / 10;
+    display: flex;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  /* Слайдер */
+  .slider {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    background: #eaeaea;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .slide img,
+  .slide video {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    object-fit: cover;
+  }
+  
+  .nav {
+    position: absolute;
+    font-family: "Fixedsys Excelsior", monospace;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #eaeaea;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  
+  .dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .dot.active {
+    background: #555;
+  }
+  
+  /* Боковая панель */
+  .info {
+    grid-row: 1;
+    grid-column: 10 / 13;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .block-info {
+    border-left: #000 4px solid;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 22px;
+  }
+
+  .description {
+    flex: 1;
+    font-size: 18px;
+    white-space: pre-wrap;
+  }
+  
+  .email-form {
+    font-family: "Fixedsys Excelsior", monospace;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .email-form input {
+    font-family: "Fixedsys Excelsior", monospace;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  .email-form button {
+    font-family: "Fixedsys Excelsior", monospace;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }  
