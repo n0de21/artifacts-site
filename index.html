@@ -77,25 +77,8 @@ Price = 210USDT
     <a href="https://www.tiktok.com/@n0de21" target="_blank">TK</a>
     <a href="https://www.youtube.com/@n0de21sync" target="_blank">YT</a>
   </div>
-  <script>
-        document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelector(".header-nav");
-    if (!nav) return;
-  
-    const page = nav.getAttribute("data-page");
-    const links = nav.querySelectorAll("a");
-
-    links.forEach(link => {
-    if (link.getAttribute("data-name") === page) {
-      link.classList.add("active");
-      }
-    });
-  });
-  </script>
-  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js"></script>
-
-
   
 </body>
 

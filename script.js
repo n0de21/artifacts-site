@@ -36,7 +36,21 @@ document.addEventListener('DOMContentLoaded', () => {
         d.classList.toggle('active', i === current);
       });
     }
-  
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector(".header-nav");
+        if (!nav) return;
+      
+        const page = nav.getAttribute("data-page");
+        const links = nav.querySelectorAll("a");
+    
+        links.forEach(link => {
+        if (link.getAttribute("data-name") === page) {
+          link.classList.add("active");
+          }
+        });
+      });    
+
 // EmailJS init
 emailjs.init('xShM2ay95f3fuFGSj');
 

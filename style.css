@@ -345,7 +345,7 @@
     border: 1px solid #ccc;
     font-size: 1rem;
   }
-  
+
   .email-form button {
     font-family: "Fixedsys Excelsior", monospace;
     padding: 0 20px;
@@ -359,6 +359,7 @@
   #overlay {
     grid-row: 2;
     grid-column: 10 / 13;
+    margin-left: 20px;
     margin-top: 20px;
     font-size: 22px;
     color: #000;
