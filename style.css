@@ -244,7 +244,6 @@
     margin-top: 20px;
   }
   
-  /* Слайдер */
   .slider {
     position: relative;
     flex: 1;
@@ -310,7 +309,6 @@
     background: #555;
   }
   
-  /* Боковая панель */
   .info {
     grid-row: 1;
     grid-column: 10 / 13;
