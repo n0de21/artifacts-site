@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const total = document.querySelectorAll('.slide').length;
     let current = 0;
   
-    // Генерируем точки-меню
+    // Gen dots
     const dotsContainer = document.getElementById('dots');
     for (let i = 0; i < total; i++) {
       const dot = document.createElement('div');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateDots();
   
-    // Навигация стрелками
+    // Nav
     document.getElementById('prev').addEventListener('click', () => {
       current = (current - 1 + total) % total;
       update();
@@ -37,20 +37,56 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    // EmailJS инициализация и отправка
-    emailjs.init('xShM2ay95f3fuFGSj');
-    document.getElementById('sendBtn').addEventListener('click', () => {
-      const email = document.getElementById('email').value;
-      if (!email) {
-        alert('Please enter your email');
-        return;
-      }
-      emailjs.send('service_2sqa886', 'template_1hmp4f8', { email })
-        .then(() => alert('Thank you!'))
-        .catch(err => {
-          console.error(err);
-          alert('Error sending email');
-        });
+// EmailJS init
+emailjs.init('xShM2ay95f3fuFGSj');
+
+const emailInput = document.getElementById('email');
+const sendBtn    = document.getElementById('sendBtn');
+const overlay    = document.getElementById('overlay');
+
+sendBtn.addEventListener('click', () => {
+  const email = emailInput.value.trim();
+  if (!email) {
+    alert('Please enter your email');
+    return;
+  }
+
+  // Block
+  sendBtn.disabled      = true;
+  emailInput.disabled   = true;
+  sendBtn.style.opacity = '0.5';
+  emailInput.style.opacity = '0.5';
+
+  // Disable overlay
+  overlay.classList.add('hidden');
+
+  // Send
+  emailjs.send('service_2sqa886', 'template_1hmp4f8', { email })
+    .then(() => {
+      // Show
+      overlay.classList.remove('hidden');             
+      
+      // 3sec
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        
+        // Cache
+        emailInput.value     = '';
+        emailInput.disabled  = false;
+        sendBtn.disabled     = false;
+        sendBtn.style.opacity = '';
+        emailInput.style.opacity = '';
+      }, 3000);
+    })
+    .catch(err => {
+      console.error(err);
+      alert('Error sending email');
+      // If error
+      emailInput.disabled  = false;
+      sendBtn.disabled     = false;
+      sendBtn.style.opacity = '';
+      emailInput.style.opacity = '';
     });
-  });
+    });
+});
   

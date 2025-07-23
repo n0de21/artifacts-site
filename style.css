@@ -353,4 +353,14 @@
     background: #000;
     color: #fff;
     cursor: pointer;
-  }  
+  }
+  
+  #overlay {
+    margin-top: 40px;
+    font-size: 22px;
+    color: #000000;
+  }
+  
+  #overlay.hidden {
+    display: none;
+  }
